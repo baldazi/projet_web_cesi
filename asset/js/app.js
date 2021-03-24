@@ -1,0 +1,9 @@
+$(()=>{
+  $('.logo').tooltip();
+  $(".cms-tabs").tabs(
+    {
+      collapsible:true
+    }
+  );
+}
+);

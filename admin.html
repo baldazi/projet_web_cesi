@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etudiant</title>
+    <title>Admin</title>
     <link rel="shotcut icon" href="asset/image/favicon.jfif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
       <link rel="stylesheet" href="asset/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="asset/js/app.js">
+
+    </script>
 </head>
 
 <body>
 
-    <header class="container-fluid bg-secondary">
+    <header class="container-fluid bg-secondary mb-3">
       <div class="row pt-2">
         <div class="col">
-          <img src="asset/image/favicon.jfif" alt="logo" class="logo">
+          <img src="asset/image/favicon.jfif" alt="logo" title="logo" class="logo">
         </div>
 
         <div class="col">
@@ -29,29 +33,29 @@
               <button class="input-group-text"><i class="fas fa-search"></i></button>
             </div>
             <div class="form-check cms-div">
-              <input class="form-check-input" name="cms-rd" type="radio" id="pilote-id-1">
-              <label class="form-check-label" for="pilote-id-1">Pilote</label>
+              <input class="form-check-input" name="search-rd" type="radio" id="pilote-id-0">
+              <label class="form-check-label" for="pilote-id-0">Pilote</label>
             </div>
             <div class="form-check cms-div">
-              <input class="form-check-input" name="cms-rd" type="radio" id="del-id-1">
-              <label class="form-check-label" for="del-id-1">Délégué</label>
+              <input class="form-check-input" name="search-rd" type="radio" id="del-id-0">
+              <label class="form-check-label" for="del-id-0">Délégué</label>
             </div>
             <div class="form-check cms-div">
-              <input class="form-check-input" name="cms-rd" type="radio" id="stage-id-1">
-              <label class="form-check-label" for="stage-id-1">Stage</label>
+              <input class="form-check-input" name="search-rd" type="radio" id="stage-id-0">
+              <label class="form-check-label" for="stage-id-0">Stage</label>
             </div>
             <div class="form-check cms-div">
-              <input class="form-check-input" name="cms-rd" type="radio" id="entreprise-id-1">
-              <label class="form-check-label" for="entreprise-id-1">Entreprise</label>
+              <input class="form-check-input" name="search-rd" type="radio" id="entreprise-id-0">
+              <label class="form-check-label" for="entreprise-id-0">Entreprise</label>
             </div>
             <div class="form-check cms-div mb-5">
-              <input class="form-check-input" name="cms-rd" type="radio" id="etudiant-id-1">
-              <label class="form-check-label" for="etudiant-id-1">Etudiant</label>
+              <input class="form-check-input" name="search-rd" type="radio" id="etudiant-id-0">
+              <label class="form-check-label" for="etudiant-id-0">Etudiant</label>
             </div>
           </form>
         </div>
 
-        <div class="col">
+        <div class="col justify-content-end">
           <i class="fas fa-user"></i>
         </div>
       </div>
@@ -91,11 +95,27 @@
                 <input class="form-check-input" name="cms-rd" type="radio" id="etudiant-id-1">
                 <label class="form-check-label" for="etudiant-id-1">Etudiant</label>
               </div>
-              <br>
+              <div class="cms-tabs">
+                <ul>
+                  <li><a href="#i1">Creer</a></li>
+                  <li><a href="#i2">Modifier</a></li>
+                  <li><a href="#i3">Supprimer</a></li>
+                </ul>
+                <div id="i1">
+                  <form class="" action="index.html" method="post">
 
-              <input type="button" class="btn btn-secondary cms-btn mb-3" value="Creer">
-              <input type="button" value="Modifier" class="btn btn-secondary cms-btn mb-3">
-              <input type="button" value="Supprimer" class="btn btn-secondary cms-btn mb-3">
+                  </form>
+                  <input type="button" class="btn btn-secondary cms-btn mb-3" value="Creer">
+                </div>
+                <div id="i2">
+                  fff
+                  <input type="button" value="Modifier" class="btn btn-secondary cms-btn mb-3">
+                </div>
+                <div id="i3">
+                  ddd
+                  <input type="button" value="Supprimer" class="btn btn-secondary cms-btn mb-3">
+                </div>
+              </div>
             </form>
           </div>
 
