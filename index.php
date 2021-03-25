@@ -32,7 +32,7 @@
           <label for="auth-ml" class="form-label">email</label><br>
           <input type="text" name="email" id="auth-ml" class="form-control" required><br>
           <label for="auth-mp" class="form-label">mot de passe</label><br>
-          <input type="text" name="pass" id="auth-mp" class="form-control" required><br>
+          <input type="password" name="pass" id="auth-mp" class="form-control" required><br>
           <div class="form-check">
             <input type="checkbox"class="form-check-input"  id="auth-chx">
             <label for="auth-chx" class="form-check-label cond-log" >En vous connectant, vous acceptez nos conditions générales d'utilisation et vous acceptez l'utilisation des cookies.</label><br>

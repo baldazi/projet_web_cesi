@@ -5,7 +5,56 @@ $(()=>{
   $("#secteur-activ,#main-search").autocomplete({
     source:dataSecteur
   });
-  $(".cms-tabs").tabs();
+
+  $("#creer-entreprise-form").hide();
+  $("#creer-stage-form").hide();
+  $("#creer-pilote-del-etudiant-form").hide();
+  /*****************************afficher/masquer******************/
+  $("#pilote-id-1").click(                                     /**/
+    function(){                                                /**/
+      $("#creer-entreprise-form").hide();                      /**/
+      $("#creer-stage-form").hide();                           /**/
+      $("#creer-pilote-del-etudiant-form").show();             /**/
+    }                                                          /**/
+  );                                                          /**/
+
+  $("#etudiant-id-1").click(                                     /**/
+    function(){                                                /**/
+      $("#creer-entreprise-form").hide();                      /**/
+      $("#creer-stage-form").hide();                           /**/
+      $("#creer-pilote-del-etudiant-form").show();             /**/
+    }                                                          /**/
+  );                                                          /**/
+
+  $("#del-id-1").click(                                     /**/
+    function(){                                                /**/
+      $("#creer-entreprise-form").hide();                      /**/
+      $("#creer-stage-form").hide();                           /**/
+      $("#creer-pilote-del-etudiant-form").show();             /**/
+    }                                                          /**/
+  );                                                          /**/
+
+  $("#entreprise-id-1").click(                                     /**/
+    function(){                                                /**/
+      $("#creer-entreprise-form").show();                      /**/
+      $("#creer-stage-form").hide();                           /**/
+      $("#creer-pilote-del-etudiant-form").hide();             /**/
+    }                                                          /**/
+  );                                                          /**/
+
+  $("#stage-id-1").click(                                     /**/
+    function(){                                                /**/
+      $("#creer-entreprise-form").hide();                      /**/
+      $("#creer-stage-form").show();                           /**/
+      $("#creer-pilote-del-etudiant-form").hide();             /**/
+    }                                                          /**/
+  );                                                          /**/
+
+
+  /*********************************************************************/
+  $(".cms-tabs").tabs({
+    collapsible:true
+  });
   $(".datepicker").datepicker();
     //$("#creer-entreprise-form").hide;
 });
