@@ -29,9 +29,10 @@
   margin-left:25px;
   width:100px;
 }
-.cms-main{
-  min-height:130px;
-}
+/*.cms-main{
+  min-height:376px;
+  background: #e9e9e9;
+}*/
 .cms-div{
   display:inline-block;
   margin-left:3px;
