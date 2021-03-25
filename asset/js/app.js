@@ -5,10 +5,8 @@ $(()=>{
   $("#secteur-activ,#main-search").autocomplete({
     source:dataSecteur
   });
-  $(".cms-tabs").tabs(
-    {
-      collapsible:true
-    });
+  $(".cms-tabs").tabs();
+  $(".datepicker").datepicker();
     //$("#creer-entreprise-form").hide;
 });
 /*if($("#pilote-id-1").attr('checked', true);){$("img").toggle();}
