@@ -20,10 +20,6 @@
       );
       });
     </script>
-    <?php
-      session_start();
-      include "connexion.php";
-    ?>
   </head>
   <body>
 
@@ -37,19 +33,26 @@
     <main class="container">
 
       <div class="auth-form bg-secondary  p-3">
-        <form method="post" action="admin.php">
+        <form class="" action="verification.php" method="POST">
           <center><h2>S'authentifier</h2></center>
           <label for="auth-ml" class="form-label">email</label><br>
-          <input type="text" name="email" id="auth-ml" class="form-control" required><br>
+          <input type="text" name="username" id="auth-ml" class="form-control" required><br>
           <label for="auth-mp" class="form-label">mot de passe</label><br>
-          <input type="password" name="pass" id="auth-mp" class="form-control" required><br>
+          <input type="password" name="password" id="auth-mp" class="form-control" required><br>
           <div class="form-check">
             <input type="checkbox"class="form-check-input"  id="auth-chx">
             <label for="auth-chx" class="form-check-label cond-log" >En vous connectant, vous acceptez nos <a href="#auth-mp">conditions générales d'utilisation<a> et vous acceptez l'utilisation des cookies.</label><br>
           </div>
           <span class="accept-cond"></span>
 
-          <br><center><input type="submit" class="btn btn-primary login-sb mt-1" name="sub" value="connexion"></center>
+          <br><center><input type="submit" class="btn btn-primary login-sb mt-1" name="sub"  value="connexion"></center>
+          <?php
+          if(isset($_GET['erreur'])){
+            $err = $_GET['erreur'];
+            if($err==1 || $err==2)
+                echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+              }
+        ?>
         </form>
       </div>
 
