@@ -56,10 +56,11 @@ $(()=>{
     collapsible:true
   });
   $(".datepicker").datepicker();
-  $("#secteur-activ,#main-search").autocomplete({
+  $("#secteur-activ").autocomplete({
     source:dataSecteur
   });
     //$("#creer-entreprise-form").hide;
+
 });
 /*if($("#pilote-id-1").attr('checked', true);){$("img").toggle();}
 if($("#del-id-1").attr('checked', true);)

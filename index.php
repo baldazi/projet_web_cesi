@@ -10,8 +10,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="asset/js/app.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $(".login-sb").submit(()=>{
+          if(!$("#auth-chx").is(":checked")){
+            $(".accept-cond").text("veiller accepter les conditions avant de se connecter");
+          }
+        }
+      );
+      });
+    </script>
     <?php
+      session_start();
       include "connexion.php";
     ?>
   </head>
@@ -27,7 +37,7 @@
     <main class="container">
 
       <div class="auth-form bg-secondary  p-3">
-        <form class="" action="index.php" method="post">
+        <form method="post" action="admin.php">
           <center><h2>S'authentifier</h2></center>
           <label for="auth-ml" class="form-label">email</label><br>
           <input type="text" name="email" id="auth-ml" class="form-control" required><br>
@@ -35,10 +45,11 @@
           <input type="password" name="pass" id="auth-mp" class="form-control" required><br>
           <div class="form-check">
             <input type="checkbox"class="form-check-input"  id="auth-chx">
-            <label for="auth-chx" class="form-check-label cond-log" >En vous connectant, vous acceptez nos conditions générales d'utilisation et vous acceptez l'utilisation des cookies.</label><br>
+            <label for="auth-chx" class="form-check-label cond-log" >En vous connectant, vous acceptez nos <a href="#auth-mp">conditions générales d'utilisation<a> et vous acceptez l'utilisation des cookies.</label><br>
           </div>
+          <span class="accept-cond"></span>
 
-          <br><center><input type="submit" class="btn btn-primary" value="connexion"></center>
+          <br><center><input type="submit" class="btn btn-primary login-sb mt-1" name="sub" value="connexion"></center>
         </form>
       </div>
 

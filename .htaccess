@@ -1,0 +1,2 @@
+#personnaliser le 404
+ErrorDocument 404 '<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"/><title>Page non trouv&eacutee</title><style>div{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:500px;height:500px;background:#6c757d;}p{padding-top:40%;color:red;font-size:25px;width:70px;}h1{color:white;}</style></head><body><div><center><p><marquee>erreur 404!</marquee></p></center><h1>Page inexistante</h1></div></body></html>'
