@@ -14,7 +14,8 @@ $(()=>{
     function(){                                                /**/
       $("#creer-entreprise-form").hide();                      /**/
       $("#creer-stage-form").hide();                           /**/
-      $("#creer-pilote-del-etudiant-form").show();             /**/
+      $("#creer-pilote-del-etudiant-form").show();
+      $("#role_dep").val("pilote");                           /**/
     }                                                          /**/
   );                                                          /**/
 
@@ -22,19 +23,21 @@ $(()=>{
     function(){                                                /**/
       $("#creer-entreprise-form").hide();                      /**/
       $("#creer-stage-form").hide();                           /**/
-      $("#creer-pilote-del-etudiant-form").show();             /**/
+      $("#creer-pilote-del-etudiant-form").show();
+      $("#role_dep").val("etudiant");
     }                                                          /**/
   );                                                          /**/
 
-  $("#del-id-1").click(                                     /**/
+  $("#del-id-1").click(                                        /**/
     function(){                                                /**/
       $("#creer-entreprise-form").hide();                      /**/
       $("#creer-stage-form").hide();                           /**/
-      $("#creer-pilote-del-etudiant-form").show();             /**/
+      $("#creer-pilote-del-etudiant-form").show();
+      $("#role_dep").val("delegue");             /**/
     }                                                          /**/
   );                                                          /**/
 
-  $("#entreprise-id-1").click(                                     /**/
+  $("#entreprise-id-1").click(                                  /**/
     function(){                                                /**/
       $("#creer-entreprise-form").show();                      /**/
       $("#creer-stage-form").hide();                           /**/
@@ -52,6 +55,11 @@ $(()=>{
 
 
   /*********************************************************************/
+
+  /********************************ajax********************************/
+
+  /********************************************************************/
+
   $(".cms-tabs").tabs({
     collapsible:true
   });
@@ -59,6 +67,9 @@ $(()=>{
   $("#secteur-activ").autocomplete({
     source:dataSecteur
   });
+
+
+
     //$("#creer-entreprise-form").hide;
 
 });

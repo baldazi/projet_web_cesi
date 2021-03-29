@@ -107,7 +107,7 @@
                 <div id="i1">
                   <!--creer-->
                   <!--creer entreprise-->
-                  <form class="" action="" method="post" id="creer-entreprise-form">
+                  <form class="" action="creation.php" method="post" id="creer-entreprise-form">
                     <div class="input-group mb-1">
                       <span class="input-group-text">Nom</span>
                       <input type="text" name="" class="form-control">
@@ -131,7 +131,7 @@
                     <center><input type="submit" class="btn btn-secondary cms-btn mb-3" value="Creer"></center>
                   </form>
                   <!--creer stage-->
-                  <form id="creer-stage-form" action="index.html" method="post">
+                  <form id="creer-stage-form" action="creation.php" method="post">
                     <div class="input-group mb-1">
                       <span class="input-group-text">compétences</span>
                       <textarea class="form-control"></textarea>
@@ -168,7 +168,7 @@
 
                   </form>
                   <!--creer pilote delegue etudiant-->
-                  <form class="" action="index.html" method="post" id="creer-pilote-del-etudiant-form">
+                  <form class="" action="creation.php" method="post" id="creer-pilote-del-etudiant-form">
                     <div class="input-group mb-1">
                       <span class="input-group-text">Nom</span>
                       <input type="text" name="" class="form-control">

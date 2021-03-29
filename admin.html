@@ -107,7 +107,7 @@
                 <div id="i1">
                   <!--creer-->
                   <!--creer entreprise-->
-                  <form class="" action="" method="post" id="creer-entreprise-form">
+                  <form class="" action="creation.php" method="post" id="creer-entreprise-form">
                     <div class="input-group mb-1">
                       <span class="input-group-text">Nom</span>
                       <input type="text" name="" class="form-control">
@@ -131,7 +131,7 @@
                     <center><input type="submit" class="btn btn-secondary cms-btn mb-3" value="Creer"></center>
                   </form>
                   <!--creer stage-->
-                  <form id="creer-stage-form" action="index.html" method="post">
+                  <form id="creer-stage-form" action="creation.php" method="post">
                     <div class="input-group mb-1">
                       <span class="input-group-text">compétences</span>
                       <textarea class="form-control"></textarea>
@@ -168,24 +168,25 @@
 
                   </form>
                   <!--creer pilote delegue etudiant-->
-                  <form class="" action="index.html" method="post" id="creer-pilote-del-etudiant-form">
+                  <form class="" action="creation.php" method="post" id="creer-pilote-del-etudiant-form">
                     <div class="input-group mb-1">
                       <span class="input-group-text">Nom</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="nom_dep" class="form-control" id="nom_dep">
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">Prénom</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="pnom_dep" class="form-control" id="pnom_dep">
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">Centre</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="centre_dep" class="form-control" id="centre_dep">
                     </div>
                       <div class="input-group mb-1">
                         <span class="input-group-text">Promotion</span>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="promotion_dep" class="form-control" id="promotion_dep">
                     </div>
-                    <center><input type="submit" class="btn btn-secondary cms-btn mb-3" value="Creer"></center>
+                    <input type="hidden" id="role_dep" name="role_dep" value="">
+                    <center><input type="submit" class="btn btn-secondary cms-btn mb-3" name="submit_dep" id="submit_dep" value="Creer"></center>
                   </form>
                 </div>
                 <div id="i2">
