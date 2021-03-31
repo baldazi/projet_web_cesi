@@ -1,6 +1,7 @@
 <?php
 session_start();
-if(isset($_POST['username']) && isset($_POST['password'])){
+if(isset($_POST['username']) && isset($_POST['password']))
+{
     // connexion à la base de données
     $db_username = 'root';
     $db_password = '';
@@ -16,30 +17,44 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     
     if($username !== "" && $password !== "")
     {
-        $requete = "SELECT count(*) FROM utilisateur where 
-              email = '".$username."' and mot_de_passe = '".$password."' ";
-        $exec_requete = mysqli_query($db,$requete);
-        $reponse      = mysqli_fetch_array($exec_requete);
-        $count = $reponse['count(*)'];
-        if($count!=0) // email et mot de passe corrects
-        {
-           $_SESSION['username'] = $username;
-           header('Location: admin.html');
-        }
-        else
-        {
-           header('Location: index.php?erreur=1'); // utilisateur ou mot de passe incorrect
-        }
-    }
-    else
-    {
-       header('Location: index.php?erreur=2'); // utilisateur ou mot de passe vide
-    }
+       $requete = "SELECT * FROM utilisateur where email = '".$username."' and mot_de_passe = '".$password."' ";
+       $exec_requete = mysqli_query($db,$requete);
+       $reponse      = mysqli_fetch_array($exec_requete);
+       $statut = $reponse['statut'];
+       // etudiant
+       if($username!="" && $password!="" && $statut!="admin" && $statut!="pilote" && $statut!="delegue" ) // nom d'utilisateur et mot de passe correctes
+       {
+          $_SESSION['username'] = $username;
+          header('Location: etudiant.html');
+       }
+       //admin
+       elseif( $username!="" && $password!="" && $statut!="pilote" && $statut!="delegue" ) // nom d'utilisateur et mot de passe correctes
+       {
+         header('Location: admin.html');
+       }
+       //pilote
+       elseif( $username!="" && $password!="" && $statut!="delegue" ) // nom d'utilisateur et mot de passe correctes
+       {
+         header('Location: pilote.html');
+       }
+       //delegue
+       elseif( $username!="" && $password!="" ) // nom d'utilisateur et mot de passe correctes
+       {
+         header('Location: delegue.html');
+       }
+       else
+       {
+          header('Location: index.php?erreur=1'); // utilisateur ou mot de passe incorrect
+       }
+   }
+   else
+   {
+      header('Location: index.php?erreur=2'); // utilisateur ou mot de passe vide
+   }
 }
 else
 {
-   header('Location: index.php');
+  header('Location: index.php');
 }
 mysqli_close($db); // fermer la connexion
-
 ?>
