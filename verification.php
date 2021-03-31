@@ -56,5 +56,6 @@ else
 {
   header('Location: index.php');
 }
-mysqli_close($db); // fermer la connexion
+mysqli_close($db); // fermer la connexion...
 ?>
+
