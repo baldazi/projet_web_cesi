@@ -32,7 +32,7 @@
             $("#span-mp").text("entrer un mot de passe");
           }
           else if(!$("#auth-chx").is(":checked")){
-            $("#accept-cond").text("veiller accepter les conditions avant de se connecter");
+            $("#accept-cond").text("veuiller accepter les conditions avant de se connecter");
           }
           else{
             $("form").submit();

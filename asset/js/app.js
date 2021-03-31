@@ -63,10 +63,12 @@ $(()=>{
   $(".cms-tabs").tabs({
     collapsible:true
   });
-  $(".datepicker").datepicker();
+  $(".datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
   $("#secteur-activ").autocomplete({
     source:dataSecteur
   });
+
+  /********************************************************************/
 
 
 

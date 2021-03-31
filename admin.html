@@ -27,9 +27,9 @@
 
         <!--barre de recherche-->
         <div class="col">
-          <form class="" action="index.html" method="post">
+          <form action="index.html" method="post">
             <div class="input-group">
-              <input type="text" name="" class="form-control" placeholder="rechercher une entreprise,une offre de stage..." id="main-search">
+              <input type="text" class="form-control" placeholder="rechercher une entreprise,une offre de stage..." id="main-search">
               <button class="input-group-text btn btn-dark"><i class="fas fa-search"></i></button>
             </div>
             <div class="form-check cms-div">
@@ -110,61 +110,61 @@
                   <form class="" action="creation.php" method="post" id="creer-entreprise-form">
                     <div class="input-group mb-1">
                       <span class="input-group-text">Nom</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="nom_cre_entr" class="form-control">
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">secteur</span>
-                      <input type="text" name="" class="form-control" id="secteur-activ">
+                      <input type="text" name="sect_cre_ent" class="form-control" id="secteur-activ">
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">Localité</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="loc_cre_ent" class="form-control">
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">Nombre de stagiaires acceptés</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="nbr_st_acc" class="form-control">
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">Confiance du pilote de promotion</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="conf_pilo_cree" class="form-control">
                     </div>
-                    <center><input type="submit" class="btn btn-secondary cms-btn mb-3" value="Creer"></center>
+                    <center><input type="submit" class="btn btn-secondary cms-btn mb-3" value="Creer" name="submit_creer_ent"></center>
                   </form>
                   <!--creer stage-->
                   <form id="creer-stage-form" action="creation.php" method="post">
                     <div class="input-group mb-1">
                       <span class="input-group-text">compétences</span>
-                      <textarea class="form-control"></textarea>
+                      <textarea class="form-control" name="comp"></textarea>
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">Localité</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="local" class="form-control">
                     </div>
                     <div class="input-group mb-1">
                       <span class="input-group-text">Entreprise</span>
-                      <input type="text" name="" class="form-control">
+                      <input type="text" name="entr" class="form-control">
                     </div>
                       <div class="input-group mb-1">
                         <span class="input-group-text">Promotion</span>
-                        <input type="text" name="" class="form-control">
+                        <input type="number" name="promo" class="form-control">
                     </div>
                     <div class="input-group mb-1">
                         <span class="input-group-text">Durée du stage</span>
-                        <input type="text" name="" class="form-control">
+                        <input type="number" name="dure" class="form-control">
                       </div>
                       <div class="input-group mb-1">
                         <span class="input-group-text">base de rémunération</span>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="base" class="form-control">
                       </div>
                       <div class="input-group mb-1">
                         <span class="input-group-text">Date de l'offre</span>
-                        <input type="text" name="" class="datepicker" class="form-control">
+                        <input type="text" name="date" class="datepicker form-control">
                       </div>
                       <div class="input-group mb-1">
                         <span class="input-group-text">Nombre de place</span>
-                        <input type="text" name="" class="form-control">
+                        <input type="number" name="place" class="form-control">
                       </div>
-                      <center><input type="submit" class="btn btn-secondary cms-btn mb-3" value="Creer"></center>
+                      <center><input type="submit" class="btn btn-secondary cms-btn mb-3" value="Creer" name="submit_creer_stage"></center>
 
                   </form>
                   <!--creer pilote delegue etudiant-->
@@ -178,13 +178,38 @@
                       <input type="text" name="pnom_dep" class="form-control" id="pnom_dep">
                     </div>
                     <div class="input-group mb-1">
-                      <span class="input-group-text">Centre</span>
-                      <input type="text" name="centre_dep" class="form-control" id="centre_dep">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text" for="centre_dep">Centre</label>
+                      </div>
+                      <select class="form-select" id="centre_dep" name="centre_dep">
+                        <option selected disabled>...</option>
+                        <option value="1">Angoulême</option>
+                        <option value="2">Brest</option>
+                        <option value="3">Saint-Nazaire</option>
+                        <option value="4">Lyon</option>
+                      </select>
                     </div>
+
                       <div class="input-group mb-1">
-                        <span class="input-group-text">Promotion</span>
-                        <input type="text" name="promotion_dep" class="form-control" id="promotion_dep">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="pnom_dep">Promotion</label>
+                        </div>
+                        <select class="form-select" id="promotion_dep" name="promotion_dep">
+                          <option selected disabled>niveau</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                        <select class="form-select">
+                          <option selected disabled>mineur</option>
+                          <option value="1">BTP</option>
+                          <option value="2">Generaliste</option>
+                          <option value="3">Info</option>
+                        </select>
                     </div>
+
                     <input type="hidden" id="role_dep" name="role_dep" value="">
                     <center><input type="submit" class="btn btn-secondary cms-btn mb-3" name="submit_dep" id="submit_dep" value="Creer"></center>
                   </form>
